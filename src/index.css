@@ -45,7 +45,7 @@ html {
 
 body {
   font-size: 16px;
-  background-color: var(--background-gradient);
+  background-color: var(--background-black);
   color: var(--white);
   margin: 0;
   padding: 0;
@@ -132,7 +132,6 @@ input {
 }
 
 .section {
-  /* padding: 16px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,8 +140,8 @@ input {
 
 .container {
   max-width: 375px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
