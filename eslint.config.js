@@ -11,14 +11,14 @@ export default defineConfig([
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
-      ecmaVersion: 'latest', // ✅ Поддержка современного JS
+      ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
-        ...globals.browser, // ✅ Глобальные переменные браузера (window, document и т.д.)
+        ...globals.browser,
       },
       parserOptions: {
         ecmaFeatures: {
-          jsx: true, // ✅ JSX поддержка
+          jsx: true,
         },
       },
     },
@@ -30,29 +30,29 @@ export default defineConfig([
       prettier: prettier,
     },
     rules: {
-      // ✅ React
-      'react/react-in-jsx-scope': 'off', // ❌ Устаревшее правило, не нужно с новым JSX
-      'react/prop-types': 'off', // ❌ Можно отключить, если не используешь PropTypes
+      // React
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
       'react/jsx-uses-react': 'off',
       'react/jsx-uses-vars': 'warn',
 
-      // ✅ React Hooks
+      // React Hooks
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
 
-      // ✅ Import
+      // Import
       'import/order': ['warn', { alphabetize: { order: 'asc' } }],
       'import/no-unresolved': 'off',
 
-      // ✅ JSX Accessibility
+      // JSX Accessibility
       'jsx-a11y/alt-text': 'warn',
 
-      // ✅ Prettier
+      // Prettier
       'prettier/prettier': 'warn',
     },
     settings: {
       react: {
-        version: 'detect', // Автоматически определяет версию React
+        version: 'detect',
       },
     },
   },
