@@ -1,0 +1,9 @@
+// .vscode/extensions.json
+{
+  // Предложение установить при открытии проекта
+  "recommendations": [
+    "esbenp.prettier-vscode", // Prettier
+    "dbaeumer.vscode-eslint" // ESLint
+    // "streetsidesoftware.code-spell-checker" // проверка опечаток
+  ]
+}
