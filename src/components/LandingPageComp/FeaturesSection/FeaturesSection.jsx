@@ -10,7 +10,19 @@ export const FeaturesSection = () => {
       <div className={`${styles.featuresContainer} container`}>
         <h2>Features</h2>
         <p>FeaturesSection text</p>
-        {/* Additional features content can go here */}
+        <p>What’s so special?</p>
+        <h2>features</h2>
+        <ul>
+          <li>
+            SURVIVE AT ALL COSTS
+            <p>
+              You have 30 minutes to find a relic, signal for extraction, and grab one of three spots on the rescue
+              chopper.
+            </p>
+          </li>
+          <li>CREATE ALLIES AND ENEMIES</li>
+          <li>IMPRESS THE AUDIENCE</li>
+        </ul>
       </div>
     </section>
   );
