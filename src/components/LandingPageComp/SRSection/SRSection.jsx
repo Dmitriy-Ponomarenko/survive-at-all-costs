@@ -10,27 +10,24 @@ export const SRSection = () => {
       <div className={`${styles.srContainer} container`}>
         <p>Can My Computer Run this game?</p>
         <h2>system requirements</h2>
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <span>OS:</span> Windows 7 64-bit only (No OSX support at this time)
-              </td>
-              <td>
-                <span>PROCESSOR:</span> Intel Core 2 Duo @ 2.4 GHZ or AMD Athlon X2 @ 2.8 GHZ
-              </td>
-              <td>
-                <span>MEMORY:</span> 8 GB RAM
-              </td>
-              <td>
-                <span>STORAGE:</span> 8 GB available space
-              </td>
-              <td>
-                <span>GRAPHICS:</span> NVIDIA GeForce GTX 660 2GB or AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="system-requirements">
+          <div className="requirement">
+            <h3>OS:</h3>
+            <p>Windows 7 64-bit only (No OSX support at this time)</p>
+          </div>
+          <div className="requirement">
+            <h3>PROCESSOR:</h3> <p>Intel Core 2 Duo @ 2.4 GHZ or AMD Athlon X2 @ 2.8 GHZ</p>
+          </div>
+          <div className="requirement">
+            <h3>MEMORY:</h3> <p>8 GB RAM</p>
+          </div>
+          <div className="requirement">
+            <h3>STORAGE:</h3> <p>8 GB available space</p>
+          </div>
+          <div className="requirement">
+            <h3>GRAPHICS:</h3> <p>NVIDIA GeForce GTX 660 2GB or AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)</p>
+          </div>
+        </div>
       </div>
     </section>
   );
