@@ -10,7 +10,7 @@ export const FeaturesSection = () => {
       <div className={`${styles.featuresContainer} container`}>
         <p>What’s so special?</p>
         <h2>Features</h2>
-        <ul>
+        <ul className={styles.featuresList}>
           <li>
             <h3>SURVIVE AT ALL COSTS</h3>
             <p>
