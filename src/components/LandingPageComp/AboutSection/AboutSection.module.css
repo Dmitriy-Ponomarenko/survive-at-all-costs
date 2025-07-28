@@ -1,11 +1,74 @@
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0;
+}
+
+.aboutFirstContainer {
+  width: 100%;
+}
+
+.aboutSubtitle {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: 'Bebas Neue';
+  margin-bottom: 5.5px;
+}
+
+.aboutTitle {
+  line-height: 33px;
+  max-width: 270px;
+  margin-bottom: 38px;
+}
+
+.aboutLine {
+  height: 1.755px;
+  border-radius: 2.345px;
+  background: var(--white);
+  margin-bottom: 26px;
+}
+
+.aboutTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+  gap: 16px;
+  padding-right: 18px;
+  max-width: 280px;
+  width: 100%;
+}
+
+.aboutText {
+  width: 100%;
+  text-align: justify;
+}
+
+.aboutTextHighlight {
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+  text-decoration-thickness: 3.676px;
+}
+
 .aboutSwiperContainer {
-  margin-top: 2rem;
+  margin-top: 45px;
   width: 100%;
   max-width: 600px;
+  padding-right: 18px;
 }
 .swiperImage {
   width: 100%;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1280px) {
+  .aboutContainer {
+    flex-direction: row;
+  }
 }

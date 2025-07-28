@@ -47,15 +47,19 @@ export const AboutSection = () => {
     <section className={`${styles.aboutSection} section`}>
       <div className={`${styles.aboutContainer} container`}>
         <div className={styles.aboutFirstContainer}>
-          <div className={styles.aboutTitleWrapper}>
-            <p className={styles.aboutSubtitle}>What is SOS?</p>
-            <h2 className={styles.aboutTitle}>social battle royale game</h2>
+          <p className={styles.aboutSubtitle}>What is SOS?</p>
+          <h2 className={styles.aboutTitle}>social battle royale game</h2>
+          <div className={styles.aboutLine}></div>
+          <div className={styles.aboutTextContainer}>
+            <p className={styles.aboutText}>
+              Each round, you and 15 other contestants compete to escape a deadly island filled with monsters. The trick
+              is: three people can survive. Will you run solo or form friendships with others to escape?
+            </p>
+            <p className={styles.aboutText}>
+              Making the right decisions could be the difference between{' '}
+              <span className={styles.aboutTextHighlight}>life and death.</span>
+            </p>
           </div>
-          <p className={styles.aboutText}>
-            Each round, you and 15 other contestants compete to escape a deadly island filled with monsters. The trick
-            is: three people can survive. Will you run solo or form friendships with others to escape? Making the right
-            decisions could be the difference between life and death.
-          </p>
         </div>
         <div className={styles.aboutSwiperContainer}>
           <Swiper
