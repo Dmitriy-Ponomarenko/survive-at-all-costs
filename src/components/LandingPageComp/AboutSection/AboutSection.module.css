@@ -1,0 +1,11 @@
+.aboutSwiperContainer {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+.swiperImage {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
