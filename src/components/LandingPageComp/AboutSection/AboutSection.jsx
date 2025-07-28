@@ -4,8 +4,9 @@ import React from 'react';
 import styles from './AboutSection.module.css';
 import '../../../index.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
-import { defaultSwiperConfig } from '../../../utils/defaultSwiperConfig';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { defaultSwiperConfig } from '../../../utils/swiperConfig';
+import { defaultSwiperAutoplay } from '../../../utils/swiperAutoplay';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -57,7 +58,11 @@ export const AboutSection = () => {
           </p>
         </div>
         <div className={styles.aboutSwiperContainer}>
-          <Swiper {...defaultSwiperConfig} modules={[Navigation, Pagination]}>
+          <Swiper
+            {...defaultSwiperConfig}
+            autoplay={defaultSwiperAutoplay}
+            modules={[Navigation, Pagination, Autoplay]}
+          >
             {slides.map((slide, idx) => (
               <SwiperSlide key={idx}>
                 <picture>
