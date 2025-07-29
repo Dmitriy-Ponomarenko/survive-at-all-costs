@@ -14,9 +14,9 @@ export const FeaturesSection = () => {
         </div>
         <ul className={styles.featuresList}>
           <li className={styles.featuresElement}>
-            <span className={styles.featuresElementMarker}></span>
+            <span className={`${styles.featuresElementMarker} ${styles.active}`}></span>
             <div>
-              <h3 className={styles.featuresElementTitle}>SURVIVE AT ALL COSTS</h3>
+              <h3>SURVIVE AT ALL COSTS</h3>
               <p className={styles.featuresElementDesc}>
                 You have 30 minutes to find a relic, signal for extraction, and grab one of three spots on the rescue
                 chopper.
@@ -24,9 +24,9 @@ export const FeaturesSection = () => {
             </div>
           </li>
           <li className={styles.featuresElement}>
-            <span className={styles.featuresElementMarker}></span>
+            <span className={`${styles.featuresElementMarker} `}></span>
             <div>
-              <h3 className={styles.featuresElementTitle}>CREATE ALLIES AND ENEMIES</h3>
+              <h3>CREATE ALLIES AND ENEMIES</h3>
               <p className={styles.featuresElementDesc}>
                 Forge alliances and make enemies — every choice shapes your survival.
               </p>
@@ -35,7 +35,7 @@ export const FeaturesSection = () => {
           <li className={styles.featuresElement}>
             <span className={styles.featuresElementMarker}></span>
             <div>
-              <h3 className={styles.featuresElementTitle}>IMPRESS THE AUDIENCE</h3>
+              <h3>IMPRESS THE AUDIENCE</h3>
               <p className={styles.featuresElementDesc}>
                 Show charisma and bold moves; win attention to unlock new opportunities or face risks.
               </p>

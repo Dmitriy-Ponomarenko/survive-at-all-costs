@@ -18,7 +18,7 @@
   display: flex;
   width: 100%;
   max-width: 350px;
-  padding: 82px 24px 85px 115px;
+  padding: 82px 12px 85px 115px;
   justify-content: end;
   margin: 0;
 }
@@ -32,7 +32,7 @@
   text-transform: uppercase;
   text-align: left;
 }
-.title {}
+
 
 .sectionSubtitle {
   margin-bottom: 25px;
@@ -43,15 +43,18 @@
   width: 100%;
   padding: 0;
   margin: 0;
+  padding-left: 12px;
   list-style: none;
 }
 
 .featuresElement {
   display: flex;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   margin-bottom: 30px;
 }
 .featuresElementDesc {
+    
+    padding-top: 18px;
   text-align: justify;
   line-height: 1.6;
 }
@@ -63,6 +66,7 @@
   flex-direction: column;
   align-items: center;
   margin-right: 12px;
+  cursor: pointer; 
 }
 
 .featuresElementMarker::before {
@@ -70,13 +74,22 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: transparent;  
+  border: 2px solid var(--white); 
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  display: block;
 }
+
 
 .featuresElementMarker::after {
   content: '';
   flex-grow: 1;
   width: 2px;
-  margin-top: 4px;
+  margin-top: 0px;
   background-color: var(--white);
+}
+
+.featuresElementMarker.active::before {
+  background-color: var(--white);
+  border-color: var(--white);
 }
