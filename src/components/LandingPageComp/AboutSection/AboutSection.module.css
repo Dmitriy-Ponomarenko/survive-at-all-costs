@@ -53,15 +53,14 @@
 
 .aboutSwiperContainer {
   margin-top: 45px;
-  width: 100%;
-  max-width: 600px;
-  padding-right: 18px;
+  width: 225px;
+  height: 270px;
   position: relative;
 }
 
 .swiperImage {
-  width: 225px;
-  height: 270px;
+  width: 100%;
+  height: 100%;
   border-radius: 2.836px;
   object-fit: cover;
 }
@@ -69,7 +68,7 @@
 .nextButton {
   position: absolute;
   top: 50%;
-  right: 15%;
+  right: -18%;
   transform: translateY(-50%);
   background: transparent;
   border: none;
@@ -91,8 +90,17 @@
 }
 
 @media screen and (min-width: 768px) {
+  .aboutFirstContainer {
+    min-width: 600px;
+  }
+
   .aboutTitle {
     line-height: 50px;
+  }
+
+  .aboutTextContainer {
+    padding-right: 0;
+    max-width: 364.851px;
   }
 
   .swiperImage {
@@ -110,6 +118,25 @@
 @media screen and (min-width: 1280px) {
   .aboutContainer {
     flex-direction: row;
+  }
+
+  .aboutFirstContainer {
+    min-width: 711px;
+  }
+
+  .aboutSubtitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .aboutTitle {
+    line-height: 80px;
+    max-width: 410.93px;
+  }
+
+  .aboutTextContainer {
+    padding-right: 0;
+    justify-self: center;
   }
 
   .swiperImage {
