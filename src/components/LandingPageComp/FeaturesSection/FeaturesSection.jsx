@@ -14,17 +14,23 @@ export const FeaturesSection = () => {
           <li>
             <h3>SURVIVE AT ALL COSTS</h3>
             <p>
-              You have 30 minutes to find a relic, signal for extraction, and grab one of three spots on the rescue
-              chopper.
+              You have 30 minutes to find a relic, signal for extraction, and
+              grab one of three spots on the rescue chopper.
             </p>
           </li>
           <li>
             <h3>CREATE ALLIES AND ENEMIES</h3>
-            <p>Forge alliances and make enemies — every choice shapes your survival.</p>
+            <p>
+              Forge alliances and make enemies — every choice shapes your
+              survival.
+            </p>
           </li>
           <li>
             <h3>IMPRESS THE AUDIENCE</h3>
-            <p>Show charisma and bold moves; win attention to unlock new opportunities or face risks.</p>
+            <p>
+              Show charisma and bold moves; win attention to unlock new
+              opportunities or face risks.
+            </p>
           </li>
         </ul>
       </div>

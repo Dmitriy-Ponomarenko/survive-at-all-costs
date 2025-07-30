@@ -1,10 +1,10 @@
 // src/api/ApiClient.js
 
-import { isLiteralObject } from '@/utils/isLiteralObject';
-import { RequestMethod } from '@/shared/enums';
-import i18n from '@/i18n/i18n';
-import { isTokenExpired } from '@/utils/isTokenExpired';
 import { t } from 'i18next';
+import i18n from '@/i18n/i18n';
+import { RequestMethod } from '@/shared/enums';
+import { isLiteralObject } from '@/utils/isLiteralObject';
+import { isTokenExpired } from '@/utils/isTokenExpired';
 
 export const buildAuthorizationHeader = accessToken => {
   return `JWT ${accessToken}`;
@@ -128,7 +128,7 @@ export class ApiClient {
               try {
                 await this.onRefreshToken(refreshToken);
                 this.isRefreshing = false;
-              } catch (refreshError) {
+              } catch {
                 this.isRefreshing = false;
                 this.onLogout();
               }
