@@ -1,0 +1,13 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;"
+  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <symbol id="arrow-right-pc" viewBox="0 0 32 32">
+      <path d="M3.2 3.2L3.2 32L15.3 17.6L3.2 3.2Z" stroke="white" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="arrow-right-mobile" viewBox="0 0 9 18">
+      <path d="M1.62158 1.53316L1.62158 16.788L7.77424 9.24597L1.62158 1.53316Z" stroke="white"
+        stroke-width="1.50632" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+  </defs>
+</svg>

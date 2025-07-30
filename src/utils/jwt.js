@@ -1,5 +1,6 @@
+// src/utils/jwt.js
+
 import { decode } from '@tsndr/cloudflare-worker-jwt';
-// import { DecodedToken } from '@/shared/types/jwt';
 
 export const decodeAccessToken = token => {
   const decodedToken = decode(token);

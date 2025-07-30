@@ -1,0 +1,135 @@
+.notFoundSection {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(
+      0deg,
+      rgba(8, 9, 10, 0.12) 0%,
+      rgba(52, 44, 29, 0.06) 73.22%,
+      rgba(255, 181, 72, 0) 100%
+    ),
+    radial-gradient(
+      189.96% 61.18% at 50% 38.82%,
+      rgba(255, 181, 72, 0) 0%,
+      rgba(52, 44, 29, 0.04) 73.22%,
+      #08090a 99.74%
+    ),
+    url('../../assets/heroSection/herobg-mobile.jpg') center/cover no-repeat;
+  background-blend-mode: normal, normal, normal;
+}
+
+.notFoundContainer {
+  padding: 32px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 95vw;
+}
+
+.notFoundContainer h1,
+.notFoundContainer p {
+  color: var(--white);
+  text-align: center;
+}
+
+.notFoundContainer h1 {
+  font-size: 36px;
+  letter-spacing: 4px;
+  margin-bottom: 6px;
+  text-shadow: -3px 4px 5px var(--black);
+  user-select: none;
+}
+
+.notFoundContainer p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.notFoundButton {
+  padding: 15px 40px;
+  background: linear-gradient(45deg, #ffcc00, #ff6600);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  box-shadow: 0 8px 20px var(--black);
+  user-select: none;
+}
+
+.notFoundButton::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.2);
+  transition: width 0.3s;
+}
+
+.notFoundButton:hover::after {
+  width: 100%;
+}
+
+.notFoundButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 204, 0, 0.6);
+}
+
+@media screen and (min-width: 768px) {
+  .notFoundSection {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(8, 9, 10, 0.12) 0%,
+        rgba(52, 44, 29, 0.06) 73.22%,
+        rgba(255, 181, 72, 0) 100%
+      ),
+      radial-gradient(
+        189.96% 61.18% at 50% 38.82%,
+        rgba(255, 181, 72, 0) 0%,
+        rgba(52, 44, 29, 0.04) 73.22%,
+        #08090a 99.74%
+      ),
+      url('../../assets/heroSection/herobg-pc.jpg') center/cover no-repeat;
+  }
+
+  .notFoundContainer {
+    padding: 48px 32px;
+    max-width: 540px;
+  }
+
+  .notFoundContainer h1 {
+    font-size: 64px;
+  }
+
+  .notFoundContainer p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .notFoundContainer {
+    max-width: 1280px;
+    padding: 64px 48px;
+  }
+
+  .notFoundContainer h1 {
+    font-size: 80px;
+  }
+
+  .notFoundContainer p {
+    font-size: 22px;
+  }
+}

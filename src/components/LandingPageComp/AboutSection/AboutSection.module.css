@@ -56,19 +56,74 @@
   width: 100%;
   max-width: 600px;
   padding-right: 18px;
+  position: relative;
 }
+
 .swiperImage {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
+  width: 225px;
+  height: 270px;
+  border-radius: 2.836px;
   object-fit: cover;
 }
 
+.nextButton {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nextButtonIcon {
+  fill: none;
+  stroke: var(--white);
+  stroke-width: 1.5px;
+  transition: stroke 0.3s ease;
+  width: 9px;
+  height: 18px;
+}
+
 @media screen and (min-width: 768px) {
+  .aboutTitle {
+    line-height: 50px;
+  }
+
+  .swiperImage {
+    width: 350px;
+    height: 430px;
+    border-radius: 4.5px;
+  }
+
+  .nextButtonIcon {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .aboutContainer {
     flex-direction: row;
+  }
+
+  .swiperImage {
+    width: 500px;
+    height: 610px;
+    border-radius: 6.333px;
+  }
+
+  .nextButton {
+    right: -55px;
+  }
+
+  .nextButtonIcon {
+    width: 64px;
+    height: 64px;
   }
 }
