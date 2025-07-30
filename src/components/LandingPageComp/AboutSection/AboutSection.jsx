@@ -1,15 +1,13 @@
-// src/components/LandingPageComp/AboutSection/AboutSection.jsx
-
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import styles from './AboutSection.module.css';
 import '../../../index.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, EffectCards } from 'swiper/modules';
 import { defaultSwiperConfig } from '../../../utils/swiperConfig';
-import { defaultSwiperAutoplay } from '../../../utils/swiperAutoplay';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/effect-cards';
 
 import About1 from '../../../assets/aboutSection/pc/about1.jpg';
 import About1x2 from '../../../assets/aboutSection/pc/about1@2x.jpg';
@@ -61,6 +59,26 @@ const slides = [
 ];
 
 export const AboutSection = () => {
+  const swiperRef = useRef(null);
+  const [iconType, setIconType] = useState('mobile');
+
+  useEffect(() => {
+    const updateIconType = () => {
+      if (window.innerWidth >= 1280) {
+        setIconType('pc');
+      } else if (window.innerWidth >= 768) {
+        setIconType('tablet');
+      } else {
+        setIconType('mobile');
+      }
+    };
+
+    updateIconType(); // initial check
+    window.addEventListener('resize', updateIconType);
+
+    return () => window.removeEventListener('resize', updateIconType);
+  }, []);
+
   return (
     <section className={`${styles.aboutSection} section`}>
       <div className={`${styles.aboutContainer} container`}>
@@ -84,8 +102,10 @@ export const AboutSection = () => {
         <div className={styles.aboutSwiperContainer}>
           <Swiper
             {...defaultSwiperConfig}
-            autoplay={defaultSwiperAutoplay}
-            modules={[Navigation, Pagination, Autoplay]}
+            modules={[Navigation, Pagination, EffectCards]}
+            effect="cards"
+            grabCursor={true}
+            onSwiper={swiper => (swiperRef.current = swiper)}
           >
             {slides.map((slide, idx) => (
               <SwiperSlide key={idx}>
@@ -107,6 +127,28 @@ export const AboutSection = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+          <button
+            className={styles.nextButton}
+            onClick={() => swiperRef.current?.slideNext()}
+            aria-label="Next slide"
+            type="button"
+          >
+            <svg
+              className={styles.nextButtonIcon}
+              aria-hidden="true"
+              focusable="false"
+              width={iconType === 'pc' ? 64 : undefined}
+              height={iconType === 'pc' ? 64 : undefined}
+            >
+              <use
+                href={
+                  iconType === 'mobile'
+                    ? '/src/assets/icons.svg#arrow-right-mobile'
+                    : '/src/assets/icons.svg#arrow-right-pc'
+                }
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
