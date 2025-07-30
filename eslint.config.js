@@ -7,7 +7,6 @@ import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import prettier from 'eslint-plugin-prettier';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
-import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
   {
