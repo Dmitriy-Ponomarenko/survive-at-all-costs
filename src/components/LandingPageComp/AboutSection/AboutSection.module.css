@@ -113,6 +113,11 @@
     width: 32px;
     height: 32px;
   }
+
+  .aboutSwiperContainer {
+    width: 450px;
+    height: 430px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -146,11 +151,17 @@
   }
 
   .nextButton {
-    right: -55px;
+    top: 50%;
+    right: -130px;
   }
 
   .nextButtonIcon {
     width: 64px;
     height: 64px;
+  }
+
+  .aboutSwiperContainer {
+    width: 500px;
+    height: 610px;
   }
 }
