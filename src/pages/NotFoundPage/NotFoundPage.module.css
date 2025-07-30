@@ -1,0 +1,115 @@
+.notFoundSection {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(
+      0deg,
+      rgba(8, 9, 10, 0.12) 0%,
+      rgba(52, 44, 29, 0.06) 73.22%,
+      rgba(255, 181, 72, 0) 100%
+    ),
+    radial-gradient(
+      189.96% 61.18% at 50% 38.82%,
+      rgba(255, 181, 72, 0) 0%,
+      rgba(52, 44, 29, 0.04) 73.22%,
+      #08090a 99.74%
+    ),
+    url('../../assets/heroSection/herobg-mobile.jpg') center/cover no-repeat;
+  background-blend-mode: normal, normal, normal;
+}
+
+.notFoundContainer {
+  padding: 32px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 95vw;
+}
+
+.notFoundContainer h1,
+.notFoundContainer p {
+  color: var(--white);
+  text-align: center;
+}
+
+.notFoundContainer h1 {
+  font-size: 36px;
+  letter-spacing: 4px;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 8px var(--black);
+}
+
+.notFoundContainer p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.notFoundButton {
+  margin-top: 32px;
+  padding: 12px 32px;
+  background: var(--yellow);
+  color: var(--black);
+  border-radius: 8px;
+  font-size: 28px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.notFoundButton:hover,
+.notFoundButton:focus {
+  background: var(--yellow-hover);
+}
+
+@media screen and (min-width: 768px) {
+  .notFoundSection {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(8, 9, 10, 0.12) 0%,
+        rgba(52, 44, 29, 0.06) 73.22%,
+        rgba(255, 181, 72, 0) 100%
+      ),
+      radial-gradient(
+        189.96% 61.18% at 50% 38.82%,
+        rgba(255, 181, 72, 0) 0%,
+        rgba(52, 44, 29, 0.04) 73.22%,
+        #08090a 99.74%
+      ),
+      url('../../assets/heroSection/herobg-pc.jpg') center/cover no-repeat;
+  }
+
+  .notFoundContainer {
+    padding: 48px 32px;
+    max-width: 540px;
+  }
+
+  .notFoundContainer h1 {
+    font-size: 64px;
+  }
+
+  .notFoundContainer p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .notFoundContainer {
+    max-width: 700px;
+    padding: 64px 48px;
+  }
+
+  .notFoundContainer h1 {
+    font-size: 80px;
+  }
+
+  .notFoundContainer p {
+    font-size: 22px;
+  }
+}
