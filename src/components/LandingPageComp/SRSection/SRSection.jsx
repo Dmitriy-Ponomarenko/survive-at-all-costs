@@ -29,7 +29,10 @@ export const SRSection = () => {
           </div>
           <div className={styles.requirement}>
             <h3>GRAPHICS:</h3>
-            <p>NVIDIA GeForce GTX 660 2GB or AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)</p>
+            <p>
+              NVIDIA GeForce GTX 660 2GB or AMD Radeon HD 7850 2GB DirectX11
+              (Shader Model 5)
+            </p>
           </div>
         </div>
       </div>

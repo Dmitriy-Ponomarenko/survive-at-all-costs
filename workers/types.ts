@@ -1,3 +1,5 @@
+// workers/types.ts
+
 import { IttyRouterOpenAPIRouterType } from 'chanfana';
 import { IRequest, RouterType } from 'itty-router';
 

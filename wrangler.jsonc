@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "survive-at-all-costs",
+  "name": "survive",
+  "account_id": "ae17de9c545c86193ee4a26cee0b2625",
   "main": "workers/index.ts",
   "compatibility_date": "2025-07-26",
   "assets": {

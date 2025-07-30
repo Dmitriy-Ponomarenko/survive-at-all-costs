@@ -1,3 +1,5 @@
+// workers/middlewares/jwtAuth.ts
+
 import jwt from '@tsndr/cloudflare-worker-jwt';
 import { IRequest } from 'itty-router';
 import { JwtPayload } from '@/shared/types/jwt';
@@ -18,7 +20,7 @@ export default async function auth(
       request.user = {
         user_id: payload.user_id,
       };
-    } catch (error) {
+    } catch {
       return new Response('JWT verification failed', { status: 401 });
     }
   } else {

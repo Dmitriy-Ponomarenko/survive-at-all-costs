@@ -8,8 +8,8 @@ export const HeroSection = () => {
   return (
     <section className={`${styles.heroSection} section`}>
       <div className={`${styles.heroContainer} container`}>
-        <h1>Welcome to Our Site</h1>
-        <p>HeroSection text</p>
+        <h1>CI CD IS FUCKING SUKA FINALLY WORKING</h1>
+        <p>HEHEEE BOYYYY</p>
       </div>
     </section>
   );

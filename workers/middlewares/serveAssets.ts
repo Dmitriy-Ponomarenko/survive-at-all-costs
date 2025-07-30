@@ -1,3 +1,5 @@
+// workers/middlewares/serveAssets.ts
+
 import { NextFunction } from '../middlewareComposer';
 
 export async function serveAssetsMiddleware(
