@@ -1,3 +1,5 @@
+// workers/middlewareComposer.ts
+
 export type Middleware = (
   request: Request,
   env: Env,

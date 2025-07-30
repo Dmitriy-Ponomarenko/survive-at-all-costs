@@ -35,7 +35,11 @@
     "workers/**/*",
     "shared/**/*",
     "worker-configuration.d.ts",
-    "vite.config.ts"
+    "vite.config.ts",
+    "drizzle.config.ts",
+    "vite.config.js",
+    "vitest.config.ts",
+    "eslint.config.js"
   ],
   "exclude": ["test"]
 }

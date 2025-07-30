@@ -19,7 +19,7 @@ export const SRSection = () => {
             <h3 className={styles.titleRequirement}>PROCESSOR:</h3>
             <p>Intel Core 2 Duo @ 2.4 GHZ or AMD Athlon X2 @ 2.8 GHZ</p>
           </div>
-          
+
           <div className={styles.requirement}>
             <h3 className={styles.titleRequirement}>MEMORY:</h3>
             <p>8 GB RAM</p>
@@ -30,11 +30,13 @@ export const SRSection = () => {
           </div>
           <div className={styles.requirement}>
             <h3 className={styles.titleRequirement}>GRAPHICS:</h3>
-            <p>NVIDIA GeForce GTX 660 2GB or AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)</p>
+            <p>
+              NVIDIA GeForce GTX 660 2GB or AMD Radeon HD 7850 2GB DirectX11
+              (Shader Model 5)
+            </p>
           </div>
         </div>
       </div>
-      
     </section>
   );
 };
