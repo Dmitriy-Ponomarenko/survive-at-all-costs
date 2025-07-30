@@ -8,10 +8,16 @@ export const NewsletterSection = () => {
   return (
     <section className={`${styles.newsletterSection} section`}>
       <div className={`${styles.newsletterContainer} container`}>
-        <h2>Subscribe to our Newsletter</h2>
+        <p className={styles.newsletterSubtitle}>Want to stay in touch?</p>
+        <h2 className={styles.newsletterTitle}>newsletter subscribe</h2>
+        <p className={styles.newsletterText}>
+          In order to start receiving our news, all you have to do is enter your
+          email address. Everything else will be taken care of by us. We will
+          send you emails containing information about game. We don’t spam.
+        </p>
         <form className={`${styles.newsletterForm}`}>
-          <input type="email" placeholder="Enter your email" required />
-          <button type="submit">Subscribe</button>
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit">Subscribe now</button>
         </form>
       </div>
     </section>
