@@ -1,3 +1,5 @@
+// workers/middlewares/jwtAuth.ts
+
 import jwt from '@tsndr/cloudflare-worker-jwt';
 import { IRequest } from 'itty-router';
 import { JwtPayload } from '@/shared/types/jwt';
