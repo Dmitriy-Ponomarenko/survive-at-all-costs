@@ -20,7 +20,7 @@ export default async function auth(
       request.user = {
         user_id: payload.user_id,
       };
-    } catch (error) {
+    } catch {
       return new Response('JWT verification failed', { status: 401 });
     }
   } else {
