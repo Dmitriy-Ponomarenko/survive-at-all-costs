@@ -73,7 +73,7 @@ export const AboutSection = () => {
       }
     };
 
-    updateIconType(); // initial check
+    updateIconType();
     window.addEventListener('resize', updateIconType);
 
     return () => window.removeEventListener('resize', updateIconType);

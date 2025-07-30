@@ -56,7 +56,7 @@
   width: 100%;
   max-width: 600px;
   padding-right: 18px;
-  position: relative; /* <-- IMPORTANT */
+  position: relative;
 }
 
 .swiperImage {
@@ -69,7 +69,7 @@
 .nextButton {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 15%;
   transform: translateY(-50%);
   background: transparent;
   border: none;
@@ -86,8 +86,7 @@
   stroke: var(--white);
   stroke-width: 1.5px;
   transition: stroke 0.3s ease;
-  /* Default size for mobile */
-  width: 9px; /* or something close to the mobile svg viewBox */
+  width: 9px;
   height: 18px;
 }
 
@@ -103,7 +102,7 @@
   }
 
   .nextButtonIcon {
-    width: 32px; /* Tablet size */
+    width: 32px;
     height: 32px;
   }
 }
@@ -119,8 +118,12 @@
     border-radius: 6.333px;
   }
 
+  .nextButton {
+    right: -55px;
+  }
+
   .nextButtonIcon {
-    width: 64px; /* PC size */
+    width: 64px;
     height: 64px;
   }
 }
