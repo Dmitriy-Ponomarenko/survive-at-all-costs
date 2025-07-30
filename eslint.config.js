@@ -34,21 +34,16 @@ export default defineConfig([
       '@typescript-eslint': tsPlugin,
     },
     rules: {
-      'padding-line-between-statements': [
-        'warn',
-        { blankLine: 'always', prev: 'import', next: '*' },
-        { blankLine: 'any', prev: 'import', next: 'import' },
-      ],
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'react/jsx-uses-react': 'off',
+      'prettier/prettier': 'off',
       'react/jsx-uses-vars': 'warn',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
       'import/order': 'off',
       'import/no-unresolved': 'off',
       'jsx-a11y/alt-text': 'warn',
-      'prettier/prettier': 'warn',
       '@typescript-eslint/no-unused-vars': [
         'warn',
         { argsIgnorePattern: '^_' },
@@ -58,15 +53,6 @@ export default defineConfig([
     settings: {
       react: {
         version: 'detect',
-      },
-    },
-  },
-
-  {
-    files: ['eslint.config.js'],
-    languageOptions: {
-      parserOptions: {
-        project: null,
       },
     },
   },
