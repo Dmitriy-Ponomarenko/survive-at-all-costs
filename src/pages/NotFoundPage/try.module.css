@@ -19,33 +19,31 @@
     ),
     url('../../assets/heroSection/herobg-mobile.jpg') center/cover no-repeat;
   background-blend-mode: normal, normal, normal;
+  position: relative;
+  overflow: hidden;
 }
 
 .notFoundContainer {
-  padding: 32px 12px;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 95vw;
-}
-
-.notFoundContainer h1,
-.notFoundContainer p {
-  color: var(--white);
+  max-width: 90vw;
   text-align: center;
+  color: #fff;
+  z-index: 1;
 }
 
 .notFoundContainer h1 {
-  font-size: 36px;
-  letter-spacing: 4px;
-  margin-bottom: 6px;
-  text-shadow: -3px 4px 5px var(--black);
-  user-select: none;
-}
-
-.notFoundContainer p {
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ffcc00, #ff6600);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .notFoundButton {
@@ -53,7 +51,7 @@
   background: linear-gradient(45deg, #ffcc00, #ff6600);
   color: #fff;
   border: none;
-  border-radius: 10px;
+  border-radius: 25px; /* Softer borders */
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -63,8 +61,7 @@
   transition:
     transform 0.3s,
     box-shadow 0.3s;
-  box-shadow: 0 8px 20px var(--black);
-  user-select: none;
+  box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
 }
 
 .notFoundButton::after {
@@ -106,30 +103,22 @@
   }
 
   .notFoundContainer {
-    padding: 48px 32px;
-    max-width: 540px;
+    padding: 60px 40px;
+    max-width: 700px;
   }
 
   .notFoundContainer h1 {
-    font-size: 64px;
-  }
-
-  .notFoundContainer p {
-    font-size: 20px;
+    font-size: 72px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .notFoundContainer {
-    max-width: 1280px;
-    padding: 64px 48px;
+    padding: 80px 60px;
+    max-width: 900px;
   }
 
   .notFoundContainer h1 {
-    font-size: 80px;
-  }
-
-  .notFoundContainer p {
-    font-size: 22px;
+    font-size: 90px;
   }
 }
