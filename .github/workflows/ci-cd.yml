@@ -1,12 +1,15 @@
-name: CI
+name: CI/CD
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
 
 jobs:
-  build-and-lint:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,3 +35,10 @@ jobs:
 
       - name: Build Cloudflare Worker
         run: npx wrangler build
+
+      - name: Deploy to Cloudflare
+        if: github.ref == 'refs/heads/main'
+        run: npx wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
