@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "survive-at-all-costs",
+  "main": "workers/index.ts",
+  "compatibility_date": "2025-07-26",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": true,
+  },
+  "observability": {
+    "enabled": true,
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "survive-at-all-costs-prod",
+      "database_id": "0a7fa43a-89c3-48d4-bf46-06368e217032",
+      "migrations_dir": "workers/db/migrations",
+    },
+  ],
+  "vars": {
+    "ACCESS_TOKEN_EXPIRES_IN": 3600,
+    "REFRESH_TOKEN_EXPIRES_IN": 604800,
+  },
+}

@@ -52,8 +52,10 @@ export const AboutSection = () => {
           <div className={styles.aboutLine}></div>
           <div className={styles.aboutTextContainer}>
             <p className={styles.aboutText}>
-              Each round, you and 15 other contestants compete to escape a deadly island filled with monsters. The trick
-              is: three people can survive. Will you run solo or form friendships with others to escape?
+              Each round, you and 15 other contestants compete to escape a
+              deadly island filled with monsters. The trick is: three people can
+              survive. Will you run solo or form friendships with others to
+              escape?
             </p>
             <p className={styles.aboutText}>
               Making the right decisions could be the difference between{' '}
@@ -70,9 +72,19 @@ export const AboutSection = () => {
             {slides.map((slide, idx) => (
               <SwiperSlide key={idx}>
                 <picture>
-                  <source srcSet={`${slide.desktop} 1x, ${slide.desktop2x} 2x`} media="(min-width: 768px)" />
-                  <source srcSet={`${slide.mobile} 1x, ${slide.mobile2x} 2x`} media="(max-width: 767px)" />
-                  <img src={slide.desktop} alt={slide.alt} className={styles.swiperImage} />
+                  <source
+                    srcSet={`${slide.desktop} 1x, ${slide.desktop2x} 2x`}
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcSet={`${slide.mobile} 1x, ${slide.mobile2x} 2x`}
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src={slide.desktop}
+                    alt={slide.alt}
+                    className={styles.swiperImage}
+                  />
                 </picture>
               </SwiperSlide>
             ))}
