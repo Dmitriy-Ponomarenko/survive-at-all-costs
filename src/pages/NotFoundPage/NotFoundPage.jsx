@@ -1,3 +1,5 @@
+// src/pages/NotFoundPage/NotFoundPage.jsx
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './NotFoundPage.module.css';
