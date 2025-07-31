@@ -41,5 +41,5 @@
     "vitest.config.ts",
     "eslint.config.js"
   ],
-  "exclude": ["test"]
+  "exclude": ["test", "dist", "node_modules"]
 }
