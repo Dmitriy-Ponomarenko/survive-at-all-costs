@@ -29,7 +29,7 @@ export const FeaturesSection = () => {
                 className={`${styles.featuresElementMarker} ${activeIndex === index ? styles.active : ''}`}
               ></span>
               <div>
-                <h3>{title}</h3>
+                <h3 className={styles.featuresElementTitle}>{title}</h3>
                 <p
                   className={`${styles.featuresElementDesc} ${activeIndex === index ? styles.active : ''}`}
                 >
