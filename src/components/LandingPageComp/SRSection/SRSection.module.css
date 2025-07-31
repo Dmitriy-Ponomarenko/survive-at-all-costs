@@ -1,4 +1,5 @@
 .srSection {
+  height: 100vh;
   background-image:
     radial-gradient(
       50.35% 43.39% at 42.49% 46.05%,
@@ -19,11 +20,19 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  max-width: 500px;
+}
+.title {
+  font-size: 18px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+
 }
 
+
 .systemRequirements {
+  margin-top: 70px;
   border: 1px solid #3f3f3f;
-  margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 200px;
@@ -53,4 +62,56 @@
 }
 .systemRequirements > div:last-child {
   border-bottom: none;
+}
+
+
+@media screen and (min-width: 768px) {
+  .srSection {
+    margin-top: 90px;
+  background-image:
+    radial-gradient(
+      76.35% 60.39% at 85.49% 41.05%,
+      rgba(255, 255, 255, 0) 3.36%,
+      rgba(0, 0, 0, 0) 46.19%,
+      #080a0b 100%
+    ),
+    url('/src/assets/SRSection/bg_PC.png');
+
+  background-position:
+    center ,
+    center;
+  }
+  .srContainer {
+    max-width: 600px;
+  }
+
+  .systemRequirements {
+      grid-template-columns: 250px 250px;
+      margin-left: 80px;
+      margin-right: 300px;
+  }
+  .requirement {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .srContainer {
+    max-width: 700px;
+  }
+  .srSection {
+      background-position:
+    center ,
+    100px center;
+  }
+  
+
+  .systemRequirements {
+      grid-template-columns: 300px 300px;
+      margin-left: 100px;
+      margin-right: 400px;
+  }
+  .requirement {
+    padding-bottom: 40px;
+  }
 }
