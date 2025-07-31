@@ -26,8 +26,8 @@
   justify-content: end;
   align-items: start;
   margin: 0;
-  margin-left: auto; 
-  margin-right: 0; 
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .title {
@@ -44,8 +44,6 @@
   text-align: left;
 }
 
-
-
 .sectionSubtitle {
   margin-bottom: 25px;
   text-align: left;
@@ -59,6 +57,7 @@
 
 .featuresElement {
   display: flex;
+  
 }
 
 .featuresElementDesc {
@@ -79,6 +78,7 @@
 
 .featuresElementMarker {
   position: relative;
+  top: 5px;
   width: 20px;
   display: flex;
   flex-direction: column;
@@ -88,6 +88,7 @@
 }
 
 .featuresElementMarker::before {
+  
   content: '';
   width: 14px;
   height: 14px;
@@ -132,7 +133,7 @@
   .featuresSection {
     background-image:
       radial-gradient(
-         107.47% 74.87% at 24.45% 42.62%,
+        107.47% 74.87% at 24.45% 42.62%,
         rgba(255, 255, 255, 68) 0%,
         rgba(0, 0, 0, 0) 0%,
         rgba(4, 5, 6, 0.52) 49.99%,
@@ -143,6 +144,11 @@
     background-position: 0 0;
     background-size: cover;
   }
+  .featuresElementTitle {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  
 }
 
 @media screen and (min-width: 1280px) {
@@ -153,5 +159,9 @@
   .featuresElementTitle {
     font-size: 36px;
     font-weight: 700;
+  }
+  .featuresElementMarker {
+
+  top: 12px;
   }
 }
