@@ -20,8 +20,14 @@ export const FeaturesSection = () => {
         </div>
         <ul className={styles.featuresList}>
           {features.map(({ title, description }, index) => (
-            <li className={styles.featuresElement} key={index} onClick={() => handleOpenChange(index)}>
-              <span className={`${styles.featuresElementMarker} ${activeIndex === index ? styles.active : ''}`}></span>
+            <li
+              className={styles.featuresElement}
+              key={index}
+              onClick={() => handleOpenChange(index)}
+            >
+              <span
+                className={`${styles.featuresElementMarker} ${activeIndex === index ? styles.active : ''}`}
+              ></span>
               <div>
                 <h3>{title}</h3>
                 <p className={`${styles.featuresElementDesc} ${activeIndex === index ? styles.active : ''}`}>

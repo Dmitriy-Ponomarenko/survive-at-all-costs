@@ -1,25 +1,28 @@
-import js from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import pluginReact from 'eslint-plugin-react';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import pluginImport from 'eslint-plugin-import';
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import prettier from 'eslint-plugin-prettier';
-import { defineConfig } from 'eslint/config';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
 
 export default defineConfig([
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
         ...globals.browser,
       },
+      parser: tsParser,
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
         },
+        project: './tsconfig.json',
       },
     },
     plugins: {
@@ -28,27 +31,24 @@ export default defineConfig([
       import: pluginImport,
       'jsx-a11y': pluginJsxA11y,
       prettier: prettier,
+      '@typescript-eslint': tsPlugin,
     },
     rules: {
-      // React
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'react/jsx-uses-react': 'off',
+      'prettier/prettier': 'off',
       'react/jsx-uses-vars': 'warn',
-
-      // React Hooks
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
-
-      // Import
-      'import/order': ['warn', { alphabetize: { order: 'asc' } }],
+      'import/order': 'off',
       'import/no-unresolved': 'off',
-
-      // JSX Accessibility
       'jsx-a11y/alt-text': 'warn',
-
-      // Prettier
-      'prettier/prettier': 'warn',
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_' },
+      ],
+      '@typescript-eslint/explicit-function-return-type': 'off',
     },
     settings: {
       react: {

@@ -1,0 +1,52 @@
+.commentCard {
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.topSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.avatarWrapper {
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.userInfoWrapper {
+  flex-grow: 1;
+  margin-left: 8px;
+}
+
+.userName {
+  font-weight: bold;
+}
+
+.userType {
+  font-size: 0.85rem;
+  color: gray;
+}
+
+.twitterIcon {
+  color: #1da1f2;
+  font-size: 20px;
+}
+
+.commentText {
+  font-size: 0.95rem;
+}
+
+.commentDate {
+  font-size: 0.8rem;
+  color: gray;
+}

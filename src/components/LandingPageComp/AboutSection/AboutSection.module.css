@@ -28,6 +28,8 @@
   border-radius: 2.345px;
   background: var(--white);
   margin-bottom: 26px;
+  position: relative;
+  z-index: 999;
 }
 
 .aboutTextContainer {
@@ -53,22 +55,155 @@
 
 .aboutSwiperContainer {
   margin-top: 45px;
-  width: 100%;
-  max-width: 600px;
-  padding-right: 18px;
+  margin-bottom: 30px;
+  width: 225px;
+  height: 270px;
+  position: relative;
 }
+
 .swiperImage {
   width: 100%;
-  height: auto;
-  border-radius: 12px;
+  height: 100%;
+  border-radius: 2.836px;
   object-fit: cover;
 }
 
+.nextButton {
+  position: absolute;
+  top: 50%;
+  right: -18%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nextButtonIcon {
+  fill: none;
+  stroke: var(--white);
+  stroke-width: 1.5px;
+  transition: stroke 0.3s ease;
+  width: 9px;
+  height: 18px;
+}
+
+.aboutSection {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      136.03% 54.57% at 50% 48.04%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.3) 60.63%
+    ),
+    url('../../../assets/aboutSection/aboutbg.jpg') center/cover no-repeat;
+  background-blend-mode: normal, normal;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.aboutSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.9);
+  z-index: -1;
+}
+
 @media screen and (min-width: 768px) {
+  .aboutFirstContainer {
+    min-width: 600px;
+  }
+
+  .aboutTitle {
+    line-height: 50px;
+  }
+
+  .aboutLine {
+    height: 2.2px;
+  }
+
+  .aboutTextContainer {
+    padding-right: 0;
+    max-width: 364.851px;
+  }
+
+  .swiperImage {
+    width: 350px;
+    height: 430px;
+    border-radius: 4.5px;
+  }
+
+  .nextButtonIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .aboutSwiperContainer {
+    width: 450px;
+    height: 430px;
+    margin-bottom: 128px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .aboutContainer {
     flex-direction: row;
+  }
+
+  .aboutFirstContainer {
+    min-width: 711px;
+    margin-right: -132px;
+  }
+
+  .aboutSubtitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .aboutLine {
+    height: 3px;
+  }
+
+  .aboutTitle {
+    line-height: 80px;
+    max-width: 410.93px;
+  }
+
+  .aboutTextContainer {
+    padding-right: 0;
+    justify-self: center;
+  }
+
+  .swiperImage {
+    width: 500px;
+    height: 610px;
+    border-radius: 6.333px;
+  }
+
+  .nextButton {
+    top: 50%;
+    right: -130px;
+  }
+
+  .nextButtonIcon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .aboutSwiperContainer {
+    width: 500px;
+    height: 610px;
+    margin-bottom: 232px;
+    margin-top: 360px;
   }
 }
