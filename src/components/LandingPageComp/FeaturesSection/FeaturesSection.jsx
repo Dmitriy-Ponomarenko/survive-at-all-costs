@@ -9,8 +9,6 @@ export const FeaturesSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   function handleOpenChange(index) {
-    console.log('QQQQQ');
-
     setActiveIndex(index);
   }
   return (
@@ -26,7 +24,9 @@ export const FeaturesSection = () => {
               <span className={`${styles.featuresElementMarker} ${activeIndex === index ? styles.active : ''}`}></span>
               <div>
                 <h3>{title}</h3>
-                <p className={`${styles.featuresElementDesc} ${activeIndex === index ? styles.active : ''}`}>{description}</p>
+                <p className={`${styles.featuresElementDesc} ${activeIndex === index ? styles.active : ''}`}>
+                  {description}
+                </p>
               </div>
             </li>
           ))}
