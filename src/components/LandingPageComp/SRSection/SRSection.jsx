@@ -9,7 +9,7 @@ export const SRSection = () => {
     <section className={`${styles.srSection} section`}>
       <div className={`${styles.srContainer} container`}>
         <p className={styles.title}>Can My Computer Run this game?</p>
-        <h2>system requirements</h2>
+        <h2 className={styles.subTitle}>system requirements</h2>
         <div className={styles.systemRequirements}>
           <div className={styles.requirement}>
             <h3 className={styles.titleRequirement}>OS:</h3>
