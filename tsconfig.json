@@ -14,7 +14,7 @@
     "jsx": "react-jsx",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "types": ["@cloudflare/workers-types/2023-07-01"],
+    "types": ["@cloudflare/workers-types"],
     "resolveJsonModule": true,
     "allowJs": true,
     "checkJs": false,

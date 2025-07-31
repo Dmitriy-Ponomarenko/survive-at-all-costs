@@ -6,10 +6,12 @@ export const features = [
   },
   {
     title: 'CREATE ALLIES AND ENEMIES',
-    description: 'Forge alliances and make enemies — every choice shapes your survival.',
+    description:
+      'Forge alliances and make enemies — every choice shapes your survival.',
   },
   {
     title: 'IMPRESS THE AUDIENCE',
-    description: 'Show charisma and bold moves; win attention to unlock new opportunities or face risks.',
+    description:
+      'Show charisma and bold moves; win attention to unlock new opportunities or face risks.',
   },
 ];
