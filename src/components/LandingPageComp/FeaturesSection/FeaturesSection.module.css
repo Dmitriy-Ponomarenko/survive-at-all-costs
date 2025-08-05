@@ -1,7 +1,11 @@
 .featuresSection {
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+  width: 100%;
   background-image:
     radial-gradient(
-      27.47% 50.87% at 11.45% 20.62%,
+      54.47% 58.87% at 11.45% 20.62%,
       rgba(255, 255, 255, 0) 0%,
       rgba(0, 0, 0, 0) 0%,
       rgba(4, 5, 6, 0.52) 25.99%,
@@ -11,16 +15,23 @@
     url('/src/assets/FeaturesSection/bg_mobile.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 
 .featuresContainer {
   display: flex;
   width: 100%;
   max-width: 350px;
-  padding: 82px 12px 85px 115px;
+  min-height: 600px;
+  padding: 82px 12px 0 115px;
   justify-content: end;
+  align-items: start;
   margin: 0;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.title {
+  padding-left: 40px;
 }
 
 .sectionTitle {
@@ -40,20 +51,19 @@
 
 .featuresList {
   width: 100%;
-  padding: 0;
-  margin: 0;
   padding-left: 12px;
-  list-style: none;
+  height: 450px;
 }
 
 .featuresElement {
   display: flex;
-  /* align-items: flex-start; */
-  margin-bottom: 30px;
+  
 }
+
 .featuresElementDesc {
   max-height: 0;
   overflow: hidden;
+  font-family: var(--font-family);
   opacity: 0;
   padding-top: 0;
   transition:
@@ -63,10 +73,12 @@
   text-align: justify;
   line-height: 1.6;
   display: block;
+  margin-bottom: 30px;
 }
 
 .featuresElementMarker {
   position: relative;
+  top: 5px;
   width: 20px;
   display: flex;
   flex-direction: column;
@@ -76,6 +88,7 @@
 }
 
 .featuresElementMarker::before {
+  
   content: '';
   width: 14px;
   height: 14px;
@@ -102,7 +115,53 @@
 }
 
 .featuresElementDesc.active {
-  max-height: 500px;         
-  opacity: 1;                
-  padding-top: 18px;         
+  max-height: 500px;
+  opacity: 1;
+  padding-top: 18px;
+}
+
+.featuresElement:last-child .featuresElementMarker.active::after {
+  content: none;
+}
+
+@media screen and (min-width: 768px) {
+  .featuresContainer {
+    margin-right: 100px;
+    max-width: 400px;
+  }
+
+  .featuresSection {
+    background-image:
+      radial-gradient(
+        107.47% 74.87% at 24.45% 42.62%,
+        rgba(255, 255, 255, 68) 0%,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(4, 5, 6, 0.52) 49.99%,
+        rgba(6, 7, 8, 0.74) 65.03%,
+        #080a0b 99.74%
+      ),
+      url('/src/assets/FeaturesSection/bg.png');
+    background-position: 0 0;
+    background-size: cover;
+  }
+  .featuresElementTitle {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  
+}
+
+@media screen and (min-width: 1280px) {
+  .featuresContainer {
+    margin-right: 150px;
+    max-width: 600px;
+  }
+  .featuresElementTitle {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  .featuresElementMarker {
+
+  top: 12px;
+  }
 }
