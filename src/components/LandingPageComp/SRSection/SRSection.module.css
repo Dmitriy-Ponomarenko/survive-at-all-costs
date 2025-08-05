@@ -7,7 +7,7 @@
       rgba(0, 0, 0, 0) 46.19%,
       #080a0b 100%
     ),
-    url('/src/assets/SRSection/bg_requeirements_mobile.png');
+    url('/src/assets/SRSection/bg-requeirements-mobile.jpg');
 
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -26,9 +26,7 @@
   font-size: 18px;
   margin-bottom: 18px;
   text-transform: uppercase;
-
 }
-
 
 .systemRequirements {
   margin-top: 70px;
@@ -64,31 +62,28 @@
   border-bottom: none;
 }
 
-
 @media screen and (min-width: 768px) {
   .srSection {
     margin-top: 90px;
-  background-image:
-    radial-gradient(
-      76.35% 60.39% at 85.49% 41.05%,
-      rgba(255, 255, 255, 0) 3.36%,
-      rgba(0, 0, 0, 0) 46.19%,
-      #080a0b 100%
-    ),
-    url('/src/assets/SRSection/bg_PC.png');
+    background-image:
+      radial-gradient(
+        76.35% 60.39% at 85.49% 41.05%,
+        rgba(255, 255, 255, 0) 3.36%,
+        rgba(0, 0, 0, 0) 46.19%,
+        #080a0b 100%
+      ),
+      url('/src/assets/SRSection/bg-requeirements-pc.jpg');
 
-  background-position:
-    center ,
-    center;
+    background-position: center, center;
   }
   .srContainer {
     max-width: 600px;
   }
 
   .systemRequirements {
-      grid-template-columns: 250px 250px;
-      margin-left: 80px;
-      margin-right: 300px;
+    grid-template-columns: 250px 250px;
+    margin-left: 80px;
+    margin-right: 300px;
   }
   .requirement {
     padding-bottom: 30px;
@@ -100,16 +95,15 @@
     max-width: 700px;
   }
   .srSection {
-      background-position:
-    center ,
-    100px center;
+    background-position:
+      center,
+      100px center;
   }
-  
 
   .systemRequirements {
-      grid-template-columns: 300px 300px;
-      margin-left: 100px;
-      margin-right: 400px;
+    grid-template-columns: 300px 300px;
+    margin-left: 100px;
+    margin-right: 400px;
   }
   .requirement {
     padding-bottom: 40px;
