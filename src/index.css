@@ -141,9 +141,8 @@ input {
 .container {
   max-width: 375px;
   padding: 18px 15px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
+  margin: 0 auto;
   flex-direction: column;
   align-items: center;
   justify-content: center;

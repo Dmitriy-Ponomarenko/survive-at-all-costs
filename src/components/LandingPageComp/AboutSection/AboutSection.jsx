@@ -143,8 +143,8 @@ export const AboutSection = () => {
               <use
                 href={
                   iconType === 'mobile'
-                    ? '/src/assets/icons.svg#arrow-right-mobile'
-                    : '/src/assets/icons.svg#arrow-right-pc'
+                    ? '/icons.svg#arrow-right-mobile'
+                    : '/icons.svg#arrow-right-pc'
                 }
               />
             </svg>
