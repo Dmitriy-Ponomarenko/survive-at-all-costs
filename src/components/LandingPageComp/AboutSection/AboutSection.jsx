@@ -91,7 +91,7 @@ export const AboutSection = () => {
               Each round, you and 15 other contestants compete to escape a
               deadly island filled with monsters. The trick is: three people can
               survive. Will you run solo or form friendships with others to
-              escape?ss
+              escape?
             </p>
             <p className={styles.aboutText}>
               Making the right decisions could be the difference between{' '}
