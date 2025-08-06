@@ -6,7 +6,7 @@ import '../../../index.css';
 
 export const SRSection = () => {
   return (
-    <section className={`${styles.srSection} section`}>
+    <section id='SRSection' className={`${styles.srSection}  section`}>
       <div className={`${styles.srContainer} container`}>
         <p className={styles.title}>Can My Computer Run this game?</p>
         <h2 className={styles.subTitle}>system requirements</h2>
