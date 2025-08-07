@@ -80,7 +80,7 @@ export const AboutSection = () => {
   }, []);
 
   return (
-    <section className={`${styles.aboutSection} section`}>
+    <section id='about' className={`${styles.aboutSection} section`}>
       <div className={`${styles.aboutContainer} container`}>
         <div className={styles.aboutFirstContainer}>
           <p className={styles.aboutSubtitle}>What is SOS?</p>

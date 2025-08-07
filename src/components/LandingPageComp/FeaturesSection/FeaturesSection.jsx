@@ -12,7 +12,7 @@ export const FeaturesSection = () => {
     setActiveIndex(index);
   }
   return (
-    <section className={`${styles.featuresSection} section`}>
+    <section id='feature' className={`${styles.featuresSection} section`}>
       <div className={`${styles.featuresContainer} container`}>
         <div className={styles.title}>
           <p className={styles.sectionTitle}>What’s so special?</p>

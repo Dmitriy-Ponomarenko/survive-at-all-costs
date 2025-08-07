@@ -6,7 +6,7 @@ import '../../index.css';
 
 export const Header = () => {
   return (
-    <header className={`${styles.header} section`}>
+    <header id='main' className={`${styles.header} section`}>
       <div className={`${styles.headerContainer} container`}>
         <h1>Site Header</h1>
         <nav>

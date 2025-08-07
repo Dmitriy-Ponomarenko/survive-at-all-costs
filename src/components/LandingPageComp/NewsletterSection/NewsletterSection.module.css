@@ -1,7 +1,188 @@
+.newsletterSection {
+  background-image:
+    radial-gradient(
+      105.01% 56.54% at 45% 32%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0) 46.15%,
+      #080a0b 99.74%
+    ),
+    url('/src/assets/NewsletterSection/image.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, left;
+  background-size: cover, auto;
+}
+
+.newsletterContainer {
+  align-items: flex-start;
+  padding-left: 120px;
+  max-width: 350px;
+}
+
 .newsletterSubtitle {
   text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  font-family: 'Bebas Neue';
 }
 
 .newsletterTitle {
   text-transform: uppercase;
+  font-size: 33px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  font-family: 'Bebas Neue';
+}
+
+.newsletterText {
+  width: 100%;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.newsletterForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+  min-width: 350px;
+}
+
+.newsletterForm input {
+  height: 44px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--yellow);
+  border: none;
+  outline: none;
+  padding-left: 15px;
+}
+
+.newsletterForm button {
+  height: 44px;
+  border-radius: 3px;
+  background: var(--yellow);
+  color: var(--dark);
+  border: none;
+  outline: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.inputGroup {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.inputGroup input {
+  height: 44px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--yellow);
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.inputGroup label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  transition: 0.3s ease all;
+  font-size: 16px;
+}
+
+.inputGroup input:focus + label,
+.inputGroup input.filled + label {
+  top: -8px;
+  font-size: 12px;
+  color: var(--white);
+  opacity: 0.5;
+  background: transparent;
+  padding: 0 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .newsletterSection {
+    height: 100vh;
+    background-image:
+      radial-gradient(
+        105.01% 56.54% at 45% 32%,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0) 46.15%,
+        #080a0b 99.74%
+      ),
+      url('/src/assets/NewsletterSection/bg_PC1.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position:
+      center,
+      -100px;
+    background-size: cover, auto;
+  }
+
+  .newsletterContainer {
+    max-width: 600px;
+    padding-left: 190px;
+  }
+
+  .newsletterForm {
+    min-width: 500px;
+    justify-content: end;
+    margin-left: 240px;
+  }
+
+  .newsletterSubtitle {
+    font-size: 25px;
+  }
+
+  .newsletterTitle {
+    font-size: 42px;
+  }
+
+  .newsletterText {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .newsletterSection {
+    background-position: center, 80px;
+  }
+  .newsletterContainer {
+    max-width: 1000px;
+    margin-right: 60px;
+  }
+
+  .newsletterForm {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: 100%;
+    margin-right: 100px;
+  }
+
+  .newsletterForm input {
+    width: 400px;
+  }
+
+  .newsletterForm button {
+    height: 44px;
+    border-radius: 3px;
+    background: var(--yellow);
+    color: var(--dark);
+    border: none;
+    outline: none;
+    font-weight: 700;
+    cursor: pointer;
+    width: 390px;
+  }
 }
