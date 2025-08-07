@@ -1,10 +1,18 @@
 // src/components/LandingPageComp/NewsletterSection/NewsletterSection.jsx
 
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './NewsletterSection.module.css';
 import '../../../index.css';
 
 export const NewsletterSection = () => {
+  const [value, setValue] = useState('');
+
+
+  function handleSubmit(e) {
+    e.preventDefault()
+    console.log(value)
+    setValue('')
+  }
   return (
     <section className={`${styles.newsletterSection} section`}>
       <div className={`${styles.newsletterContainer} container`}>
@@ -15,11 +23,21 @@ export const NewsletterSection = () => {
           email address. Everything else will be taken care of by us. We will
           send you emails containing information about game. We don’t spam.
         </p>
-        <form className={`${styles.newsletterForm}`}>
-          <input type="email" placeholder="Your email address" required />
-          <button type="submit">Subscribe now</button>
-        </form>
       </div>
+      <form className={`${styles.newsletterForm}`} onSubmit={handleSubmit}>
+        <div className={styles.inputGroup}>
+          <input
+            type="email"
+            id="email"
+            value={value}
+            onChange={e => setValue(e.target.value)}
+            required
+            className={value ? styles.filled : ''}
+          />
+          <label htmlFor="email">Your email address</label>
+        </div>
+        <button type="submit">Subscribe now</button>
+      </form>
     </section>
   );
 };
